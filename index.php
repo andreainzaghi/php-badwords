@@ -1,5 +1,5 @@
 <?php
- $nome= 'cacca'
+ $nome= $_GET['nome'];
  ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
@@ -19,13 +19,13 @@
    <body>
      <!-- bad word senza ??filtro?? -->
        <p>frase senza filtro</p>
-        <h1>ieri ho fatto la  <? echo $nome; ?></h1>
+        <h1>ieri ho fatto la  <?php echo $nome; ?></h1>
         <!-- filtro -->
      <?php
         if ($nome == 'cacca')
-        $nome = 'ca**a' ;
+        $nome = '***' ;
       ?>
       <p>frase con filtro</p>
-     <h1>ieri ho fatto la <? echo $nome; ?></h1>
+     <h1>ieri ho fatto la <?php echo $nome; ?></h1>
    </body>
  </html>
